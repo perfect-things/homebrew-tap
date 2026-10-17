@@ -13,13 +13,13 @@ cask "wicher" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Wicher.app"
 
   # Self-signed, not notarized: strip the quarantine flag so Gatekeeper doesn't block launch.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Wicher.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Wicher.app"]
   end
 
   uninstall quit: "dev.wicher.app"
