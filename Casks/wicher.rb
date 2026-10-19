@@ -1,6 +1,6 @@
 cask "wicher" do
-  version "0.1.0"
-  sha256 "ceab9df8c22f95718d001551bfe4fb7459ef07de4eff0165f799622213405d46"
+  version "0.2.0"
+  sha256 "ebdc713e3c11d880496584d72f7c551c8844fad1ef98ce53e7f2a81d7d20dce0"
 
   url "https://github.com/perfect-things/wicher/releases/download/v#{version}/Wicher-#{version}.zip"
   name "Wicher"
